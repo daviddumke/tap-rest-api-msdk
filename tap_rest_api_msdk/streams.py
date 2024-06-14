@@ -2,6 +2,8 @@
 
 import email.utils
 import json
+import singer
+
 from datetime import datetime
 from string import Template
 from typing import Any, Dict, Generator, Iterable, Optional, Union
@@ -23,6 +25,8 @@ from tap_rest_api_msdk.pagination import (
     RestAPIOffsetPaginator,
 )
 from tap_rest_api_msdk.utils import flatten_json, get_start_date
+
+LOGGER = singer.get_logger()
 
 # Remove commented section to show http_request for debugging
 # import logging
@@ -348,6 +352,7 @@ class DynamicStream(RestApiStream):
         """
         # Initialise Starting Values
         last_run_date = get_start_date(self, context)
+        LOGGER.info("teste DAVID")
         params: dict = {}
         if self.params:
             for k, v in self.params.items():
