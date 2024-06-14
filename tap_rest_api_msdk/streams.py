@@ -25,8 +25,6 @@ from tap_rest_api_msdk.pagination import (
 )
 from tap_rest_api_msdk.utils import flatten_json, get_start_date
 
-LOGGER = singer.get_logger()
-
 # Remove commented section to show http_request for debugging
 # import logging
 # import http.client
