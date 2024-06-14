@@ -2,7 +2,6 @@
 
 import email.utils
 import json
-
 from datetime import datetime
 from string import Template
 from typing import Any, Dict, Generator, Iterable, Optional, Union
@@ -349,9 +348,7 @@ class DynamicStream(RestApiStream):
         """
         # Initialise Starting Values
         last_run_date = get_start_date(self, context)
-        
         params: dict = {}
-        
         if self.params:
             for k, v in self.params.items():
                 params[k] = v
@@ -397,7 +394,6 @@ class DynamicStream(RestApiStream):
         """
         # Initialise Starting Values
         last_run_date = get_start_date(self, context)
-        
         params: dict = {}
 
         if self.params:
@@ -524,7 +520,6 @@ class DynamicStream(RestApiStream):
         """
         # Initialise Starting Values
         last_run_date = get_start_date(self, context)
-        
         params: dict = {}
 
         if self.params:
