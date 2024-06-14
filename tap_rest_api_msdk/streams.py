@@ -2,8 +2,6 @@
 
 import email.utils
 import json
-import singer
-import pendulum
 
 from datetime import datetime
 from string import Template
@@ -353,11 +351,6 @@ class DynamicStream(RestApiStream):
         """
         # Initialise Starting Values
         last_run_date = get_start_date(self, context)
-        LOGGER.info("teste DAVID")
-
-        last_run_date = datetime.fromtimestamp(
-                        pendulum.parse(last_run_date).timestamp()
-                    )
         
         params: dict = {}
         if self.params:
@@ -405,11 +398,7 @@ class DynamicStream(RestApiStream):
         """
         # Initialise Starting Values
         last_run_date = get_start_date(self, context)
-        LOGGER.info("teste DAVID")
-
-        last_run_date = datetime.fromtimestamp(
-                        pendulum.parse(last_run_date).timestamp()
-                    )
+        
         params: dict = {}
 
         if self.params:
@@ -536,7 +525,6 @@ class DynamicStream(RestApiStream):
         """
         # Initialise Starting Values
         last_run_date = get_start_date(self, context)
-        LOGGER.info("teste DAVID")
         params: dict = {}
 
         if self.params:
