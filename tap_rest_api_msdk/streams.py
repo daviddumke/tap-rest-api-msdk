@@ -351,6 +351,7 @@ class DynamicStream(RestApiStream):
         last_run_date = get_start_date(self, context)
         
         params: dict = {}
+        
         if self.params:
             for k, v in self.params.items():
                 params[k] = v
@@ -523,6 +524,7 @@ class DynamicStream(RestApiStream):
         """
         # Initialise Starting Values
         last_run_date = get_start_date(self, context)
+        
         params: dict = {}
 
         if self.params:
